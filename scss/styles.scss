@@ -1,0 +1,468 @@
+$primary-color: #03a5de;
+$light-primary-color: #e4f6ff;
+$secondary-color: #2fa21b;
+$primary-text-color: #6a6a6a;
+$btn-gradient: linear-gradient(to right, #0097d4, #02bfe7 20%, #0097d4);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  color: $primary-text-color;
+  scroll-behavior: smooth;
+  // outline: 1px solid red;
+}
+
+.skip-link {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  border: 1px dotted grey;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.skip-link:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// adds top padding to anchor link destination
+:target:before {
+  content: "";
+  display: block;
+  height: 50px;
+  margin: -100px 0 0;
+}
+// body#home li.home a::after {
+//   transform: scale(1);
+// }
+
+/*---------------- UTILITIES ----------------*/
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bold-font {
+  font-weight: 900;
+}
+
+.small-font {
+  font-size: 1.2rem;
+  @extend .bold-font;
+}
+
+.medium-font {
+  font-size: 2rem;
+  @extend .bold-font;
+}
+
+.large-font {
+  font-size: 4rem;
+  @extend .bold-font;
+  line-height: 95%;
+}
+
+.btn-primary {
+  background: $primary-color;
+  color: #fff;
+  border-radius: 20px;
+  padding: 12px 30px;
+  font-weight: 700;
+  transition: background 0.5s linear;
+}
+
+.btn-primary:hover {
+  background-image: $btn-gradient;
+  background-size: 150% auto;
+  background-position: center center;
+  transform: scale(0.99);
+}
+
+.mobile-menu {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  max-width: 450px;
+  margin: 30px auto;
+  line-height: 170%;
+}
+
+/*---------------- FLOATING BUBBLES ----------------*/
+
+.bubbles {
+  position: absolute;
+  z-index: 1002;
+}
+
+.bubble {
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  background-image: url("../img/large-bubble.png");
+}
+
+/*---------------- INTRO SCREEN ----------------*/
+
+.intro {
+  position: fixed;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  background-image: url(../img/clean-and-green-logo.svg);
+  background-repeat: no-repeat;
+  background-size: 40vw;
+  background-position: center;
+  z-index: 1000;
+}
+
+.stain,
+.hand {
+  position: absolute;
+  align-self: center;
+}
+
+.stain {
+  top: 40px;
+  right: 30vw;
+}
+
+.hand {
+  z-index: 2;
+  top: -300px;
+  right: 17vw;
+}
+
+/*---------------- MAIN NAVIGATION ----------------*/
+
+nav {
+  @extend .flex;
+  height: 215px;
+
+  ul {
+    @extend .flex;
+    @extend .bold-font;
+    width: 90vw;
+    max-width: 1000px;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+
+    li {
+      a {
+        color: $primary-color;
+        cursor: pointer;
+      }
+
+      a::after {
+        content: "";
+        display: block;
+        width: 100%;
+        transform: scale(0);
+        height: 2px;
+        margin-top: 1px;
+        background-color: lighten($primary-color, 15%);
+        transition: transform 0.15s linear;
+      }
+
+      a:hover::after {
+        transform: scale(1);
+      }
+
+      img {
+        position: relative;
+        width: 215px;
+        background-color: #fff;
+        border-radius: 50%;
+        padding: 20px;
+        z-index: 100;
+      }
+
+      .nav-logo::after {
+        content: "";
+        display: none;
+      }
+    }
+  }
+
+  .main-nav-link {
+    position: relative;
+    top: -50px;
+  }
+}
+
+/*---------------- BANNER SECTION ----------------*/
+
+.banner {
+  position: relative;
+  @extend .flex;
+  flex-direction: column;
+  height: 600px;
+  max-height: 75vh;
+  min-height: 450px;
+  overflow: hidden;
+  top: -50px;
+
+  .header-video {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    // overflow-x: hidden;
+    filter: brightness(0.7);
+  }
+
+  .shadow {
+    position: absolute;
+    top: 0;
+  }
+
+  h1 {
+    width: 550px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 100%;
+    color: #fff;
+  }
+
+  .feature-word {
+    @extend .bold-font;
+    display: block;
+    font-size: 8rem;
+    letter-spacing: -4px;
+    text-align: center;
+    padding: 50px 0 60px 0;
+    color: #fff;
+  }
+
+  .btn-primary {
+    margin-top: 40px;
+  }
+}
+
+/*---------------- REVIEW SECTION ----------------*/
+
+.review-container {
+  position: relative;
+  @extend .flex;
+  background-color: $primary-color;
+  height: 200px;
+  top: -50px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    bottom: -14px;
+    background-color: $primary-color;
+    transform: rotate(45deg);
+    border-radius: 3px;
+  }
+
+  .review {
+    color: #fff;
+    font-size: 1.15rem;
+    max-width: 540px;
+    padding: 50px;
+    line-height: 160%;
+    letter-spacing: 1px;
+  }
+}
+
+/*---------------- PACKAGES SECTION ----------------*/
+
+.packages-container {
+  position: relative;
+  margin: 35px;
+
+  h2 {
+    @extend .large-font;
+    color: $primary-color;
+    margin: 5px auto;
+    text-align: center;
+    line-height: 85%;
+
+    .sub-heading {
+      display: block;
+      @extend .medium-font;
+      text-align: center;
+      color: $primary-color;
+    }
+  }
+}
+
+/*---------------- PACKAGE CARDS ----------------*/
+
+.packages {
+  @extend .flex;
+
+  .package-card {
+    box-shadow: 3px 7px 12px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    padding-bottom: 50px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 30px 20px;
+    width: 275px;
+
+    .package-title {
+      @extend .small-font;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .package-price {
+      position: relative;
+      @extend .large-font;
+      font-weight: 700;
+      letter-spacing: -2px;
+    }
+
+    .dollar-sign {
+      position: relative;
+      font-size: 1.7rem;
+      top: -30px;
+      left: -5px;
+    }
+
+    .frequency {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-top: -4px;
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: lighten($primary-text-color, 30%);
+      margin: 30px 0;
+    }
+
+    ul {
+      text-align: left;
+      padding-bottom: 40px;
+    }
+
+    li {
+      padding: 7px;
+    }
+
+    .checked:before {
+      content: "✓";
+      padding-right: 8px;
+      font-weight: 700;
+      color: $primary-color;
+    }
+
+    .unchecked {
+      opacity: 0.4;
+    }
+
+    .unchecked:before {
+      content: "x";
+      padding-right: 8px;
+      font-weight: 700;
+      opacity: 0.6;
+    }
+
+    .most-popular {
+      @extend .flex;
+      @extend .bold-font;
+      position: absolute;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      background: $primary-color;
+      color: #fff;
+      height: 30px;
+      width: 150px;
+      border-radius: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -15px;
+    }
+  }
+}
+
+/*---------------- FOOTER SECTION ----------------*/
+
+footer {
+  position: relative;
+  height: 400px;
+  background: $primary-color;
+  background-image: url(../img/suds.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  .suds {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    top: 0;
+  }
+
+  .footer-content {
+    @extend .flex;
+    height: 350px;
+    align-items: flex-end;
+  }
+
+  .copyright {
+    color: #fff;
+  }
+}
+
+/*---------------- MEDIA QUERIES ----------------*/
+
+@media screen and (max-width: 1050px) {
+  .banner .header-video {
+    height: 80vh;
+    width: auto;
+  }
+
+  .packages {
+    flex-direction: column;
+  }
+
+  .package-card {
+    min-width: 550px;
+
+    ul {
+      width: 400px;
+      columns: 2;
+      margin: 20px auto;
+    }
+
+    .most-popular {
+      height: 75px;
+      width: 75px;
+      border-radius: 50%;
+      left: 80px;
+      top: 35px;
+      transform: rotate(-10deg);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    display: none;
+  }
+}
