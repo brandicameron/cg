@@ -105,7 +105,7 @@ p {
 /*---------------- FLOATING BUBBLES ----------------*/
 .bubbles {
   position: absolute;
-  z-index: 1002;
+  z-index: 999;
 }
 
 .bubble {
@@ -118,6 +118,7 @@ p {
 /*---------------- INTRO SCREEN ----------------*/
 .intro {
   position: fixed;
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
   background-color: #fff;
@@ -125,26 +126,53 @@ p {
   background-repeat: no-repeat;
   background-size: 40vw;
   background-position: center;
+  -webkit-box-shadow: 3px 3px 60px rgba(0, 0, 0, 0.4);
+          box-shadow: 3px 3px 60px rgba(0, 0, 0, 0.4);
   z-index: 1000;
+}
+
+.scene {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .stain,
 .hand {
   position: absolute;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 
 .stain {
-  top: 40px;
-  right: 30vw;
+  top: 100px;
+  left: 100px;
 }
 
 .hand {
+  top: -650px;
+  left: 20px;
   z-index: 2;
-  top: -300px;
-  right: 17vw;
+}
+
+.raise-intro {
+  -webkit-animation: raise-intro 600ms ease-in forwards 500ms;
+          animation: raise-intro 600ms ease-in forwards 500ms;
+}
+
+@-webkit-keyframes raise-intro {
+  to {
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh);
+    visibility: hidden;
+  }
+}
+
+@keyframes raise-intro {
+  to {
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh);
+    visibility: hidden;
+  }
 }
 
 /*---------------- MAIN NAVIGATION ----------------*/

@@ -1,5 +1,46 @@
 gsap.registerPlugin(ScrollTrigger, CustomEase, CustomWiggle);
 
+// ---------------- INTRO SCREEN/ANIMATION ----------------
+
+function determineSessionStorage() {
+  if (!("visited" in sessionStorage)) {
+    document.querySelector(".intro").hidden = false;
+    introAnimation();
+  }
+  sessionStorage.setItem("visited", "visited");
+}
+
+function introAnimation() {
+  function raiseIntro() {
+    document.querySelector(".intro").classList.add("raise-intro");
+  }
+
+  let tl = gsap.timeline();
+  CustomWiggle.create("myWiggle", { wiggles: 4 });
+
+  tl.to(".hand", {
+    delay: 1,
+    duration: 0.4,
+    y: 400,
+  })
+    .to(".stain", {
+      opacity: 0,
+      duration: 0.2,
+    })
+    .to(".hand", {
+      duration: 0.3,
+      ease: "myWiggle",
+      x: 5,
+    })
+    .to(".hand", {
+      duration: 1,
+      y: -400,
+      onUpdate: raiseIntro,
+    });
+}
+
+window.onload = determineSessionStorage;
+
 // ---------------- BUBBLES ----------------
 //https://codepen.io/snorkltv/pen/abddMGd
 
@@ -110,7 +151,6 @@ function init() {
   createBubbles(5);
   gsap.to("body", { opacity: 1, duration: 0.2 });
 }
-
 gsap.delayedCall(0.1, init);
 
 // ---------------- GSAP ANIMATIONS ----------------
