@@ -241,7 +241,6 @@ nav {
     position: absolute;
     z-index: -1;
     width: 100vw;
-    // overflow-x: hidden;
     filter: brightness(0.7);
   }
 
@@ -251,7 +250,8 @@ nav {
   }
 
   h1 {
-    width: 550px;
+    width: clamp(300px, 70vw, 550px);
+    font-size: 2rem;
     text-align: center;
     margin: 0 auto;
     line-height: 100%;
@@ -261,8 +261,8 @@ nav {
   .feature-word {
     @extend .bold-font;
     display: block;
-    font-size: 8rem;
-    letter-spacing: -4px;
+    font-size: clamp(3rem, 25vw, 8rem);
+    letter-spacing: -3px;
     text-align: center;
     padding: 50px 0 60px 0;
     color: #fff;
@@ -296,8 +296,7 @@ nav {
   .review {
     color: #fff;
     font-size: 1.15rem;
-    max-width: 540px;
-    padding: 50px;
+    width: clamp(300px, 85vw, 540px);
     line-height: 160%;
     letter-spacing: 1px;
   }
@@ -427,14 +426,6 @@ footer {
   background-size: contain;
   background-repeat: no-repeat;
 
-  .suds {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
-    top: 0;
-  }
-
   .footer-content {
     @extend .flex;
     height: 350px;
@@ -448,7 +439,7 @@ footer {
 
 /*---------------- MEDIA QUERIES ----------------*/
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1000px) {
   .banner .header-video {
     height: 80vh;
     width: auto;
@@ -478,8 +469,83 @@ footer {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .intro {
+    background-size: 70vw;
+  }
+}
+
 @media screen and (max-width: 600px) {
-  nav {
+  .stain {
+    top: 100px;
+    left: -130px;
+    transform: scale(0.85);
+  }
+
+  .hand {
+    transform: scale(0.75);
+    top: -600px;
+    left: -200px;
+    z-index: 2;
+  }
+
+  .main-nav-link {
     display: none;
+  }
+
+  .banner .header-video {
+    height: 70vh;
+    top: 0;
+  }
+
+  .banner {
+    .feature-word {
+      padding: 35px 0 45px 0;
+    }
+  }
+
+  .review-container {
+    margin-top: -70px;
+
+    .review {
+      font-size: 1.05rem;
+    }
+  }
+
+  .packages-container {
+    margin-top: 20px;
+  }
+
+  .package-card {
+    min-width: 300px;
+
+    ul {
+      width: auto;
+      columns: 1;
+      margin: 20px auto;
+    }
+
+    .most-popular {
+      height: 75px;
+      width: 75px;
+      border-radius: 50%;
+      left: 80px;
+      top: 35px;
+      transform: rotate(-10deg);
+    }
+  }
+
+  footer {
+    height: auto;
+    background-size: 250vw;
+    overflow-x: hidden;
+  }
+
+  .footer-content {
+    width: 75vw;
+    text-align: center;
+    line-height: 160%;
+    padding-bottom: 50px;
+    margin: 0 auto;
   }
 }
