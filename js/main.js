@@ -1,11 +1,14 @@
 gsap.registerPlugin(ScrollTrigger, CustomEase, CustomWiggle);
 
 // ---------------- INTRO SCREEN/ANIMATION ----------------
-
+// Added body hidden code to prevent the flash whichever screen isn't supposed to show based on session storage value
 function determineSessionStorage() {
   if (!("visited" in sessionStorage)) {
-    document.querySelector(".intro").hidden = false;
     introAnimation();
+    document.querySelector("body").hidden = false;
+  } else {
+    document.querySelector(".intro").hidden = true;
+    document.querySelector("body").hidden = false;
   }
   sessionStorage.setItem("visited", "visited");
 }
