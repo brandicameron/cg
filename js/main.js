@@ -22,7 +22,7 @@ function introAnimation() {
   CustomWiggle.create("myWiggle", { wiggles: 4 });
 
   tl.to(".hand", {
-    delay: 1,
+    delay: 1.2,
     duration: 0.4,
     y: 400,
   })
@@ -38,7 +38,8 @@ function introAnimation() {
     .to(".hand", {
       duration: 1,
       y: -400,
-      onUpdate: raiseIntro,
+      // onUpdate: raiseIntro,
+      onComplete: raiseIntro,
     });
 }
 

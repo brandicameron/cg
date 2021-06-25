@@ -11,7 +11,7 @@
     <meta name="author" content="Brandi Cameron | hello@brandicameron.com" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.min.css" />
     <!-- Share Graphic -->
     <meta property="og:title" content="  TITLE  HERE  " />
     <meta property="og:image" content="  IMAGE URL  HERE  " />
@@ -28,10 +28,18 @@
 
     <!-- **************** INTRO **************** -->
 
-    <div class="intro">
+    <div class="intro" aria-hidden="true">
       <div class="scene">
-        <img class="hand" src="./img/hand.png" alt="" />
-        <img class="stain" src="./img/stain.png" alt="" />
+        <picture>
+          <source srcset="./img/hand.webp" type="image/webp" />
+          <source srcset="./img/hand.jpg" type="image/png" />
+          <img class="hand" src="./img/hand.png" alt="" />
+        </picture>
+        <picture>
+          <source srcset="./img/stain.webp" type="image/webp" />
+          <source srcset="./img/stain.jpg" type="image/png" />
+          <img class="stain" src="./img/stain.png" alt="" />
+        </picture>
       </div>
     </div>
 
@@ -51,6 +59,7 @@
                 src="./img/clean-and-green-logo.svg"
                 alt="Clean and Green logo"
                 width="215"
+                height="210"
             /></a>
           </li>
           <li class="main-nav-link"><a href="index.html">About</a></li>
