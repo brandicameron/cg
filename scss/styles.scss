@@ -231,8 +231,8 @@ nav {
   position: relative;
   @extend .flex;
   flex-direction: column;
-  height: clamp(80vh, 90vh, 600px);
   width: 100vw;
+  height: clamp(80vh, 90vh, 600px);
   overflow: hidden;
   top: -50px;
 
