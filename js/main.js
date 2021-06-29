@@ -157,7 +157,7 @@ function init() {
 }
 gsap.delayedCall(0.1, init);
 
-// ---------------- GSAP ANIMATIONS ----------------
+// ---------------- CONTENT ANIMATIONS ----------------
 
 gsap.to(".header-video", {
   scale: 1.3,
@@ -172,11 +172,11 @@ gsap.to(".header-video", {
 const packages = gsap.utils.toArray(".package-card");
 packages.forEach((package) => {
   gsap.from(package, {
-    y: 150,
+    y: 650,
     scrollTrigger: {
-      trigger: ".header-video",
-      start: "bottom bottom",
-      end: "+=250",
+      trigger: package,
+      start: "center",
+      end: "+=950",
       scrub: 0.5,
     },
   });
