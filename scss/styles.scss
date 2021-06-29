@@ -5,13 +5,12 @@ $primary-text-color: #6a6a6a;
 $btn-gradient: linear-gradient(to right, #0097d4, #02bfe7 20%, #0097d4);
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: "Lato", Arial, Helvetica, sans-serif;
   color: $primary-text-color;
   scroll-behavior: smooth;
-  // outline: 1px solid red;
 }
 
 .skip-link {
@@ -39,9 +38,6 @@ $btn-gradient: linear-gradient(to right, #0097d4, #02bfe7 20%, #0097d4);
   height: 50px;
   margin: -100px 0 0;
 }
-// body#home li.home a::after {
-//   transform: scale(1);
-// }
 
 /*---------------- UTILITIES ----------------*/
 
