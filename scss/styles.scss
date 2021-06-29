@@ -347,6 +347,7 @@ nav {
   @extend .flex;
 
   .package-card {
+    position: relative;
     box-shadow: 3px 7px 12px rgba(0, 0, 0, 0.2);
     padding: 30px;
     padding-bottom: 50px;
