@@ -181,6 +181,7 @@ nav {
     li {
       a {
         color: $primary-color;
+        color: red;
         cursor: pointer;
       }
 
@@ -470,15 +471,6 @@ footer {
       columns: 2;
       margin: 20px auto;
     }
-
-    .most-popular {
-      height: 75px;
-      width: 75px;
-      border-radius: 50%;
-      left: 80px;
-      top: 35px;
-      transform: rotate(-10deg);
-    }
   }
 }
 
@@ -540,15 +532,6 @@ footer {
       width: auto;
       columns: 1;
       margin: 20px auto;
-    }
-
-    .most-popular {
-      height: 75px;
-      width: 75px;
-      border-radius: 50%;
-      left: 80px;
-      top: 35px;
-      transform: rotate(-10deg);
     }
   }
 

@@ -169,7 +169,18 @@ gsap.to(".header-video", {
   },
 });
 
-// const packages = gsap.utils.toArray(".package-card");
+const packages = gsap.utils.toArray(".package-card");
+
+packages.forEach((package) => {
+  gsap.from(package, {
+    y: 550,
+    scrollTrigger: {
+      trigger: ".packages",
+      start: "top center",
+      scrub: true,
+    },
+  });
+});
 
 // ---------------- INSERT COPYRIGHT ----------------
 
