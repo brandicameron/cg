@@ -307,7 +307,10 @@ nav {
 
   .shadow {
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     top: 0;
+    width: 90vw;
   }
 
   h1 {
@@ -497,7 +500,7 @@ nav {
 .about-container {
   @extend .flex;
   flex-direction: column;
-  padding: 85px 0 50px 0;
+  padding: 85px 0 40px 0;
 
   h2 {
     color: $primary-color;

@@ -87,7 +87,18 @@
 
     <main id="content">
       <section class="banner">
-        <img src="./img/shadow.png" alt="" class="shadow" />
+        <picture>
+          <source srcset="./img/shadow.webp" type="image/webp" />
+          <source srcset="./img/shadow.png" />
+          <img
+            src="./img/shadow.png"
+            alt=""
+            class="shadow"
+            width="1083"
+            height="51"
+          />
+        </picture>
+        <!-- <img src="./img/shadow.png" alt="" class="shadow" /> -->
         <video
           class="header-video"
           autoplay
@@ -259,11 +270,17 @@
             />
             <p class="tiny-text">Heather Davidson &#8226; Owner</p>
           </div>
-          <img
-            src="./img/heather.png"
-            alt="Heather Davidson, owner of Clean and Green"
-            class="heather lift"
-          />
+          <picture>
+            <source srcset="./img/heather.webp" type="image/webp" />
+            <source srcset="./img/heather.png" />
+            <img
+              src="./img/heather.png"
+              alt="Heather Davidson, owner of Clean and Green"
+              class="heather lift"
+              width="406"
+              height="640"
+            />
+          </picture>
         </div>
       </section>
 
