@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Brandi Cameron | hello@brandicameron.com" />
     <meta name="theme-color" content="#ffffff" />
-    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
     <link rel="stylesheet" href="css/styles.min.css" />
     <!-- Share Graphic -->
     <meta property="og:title" content="  TITLE  HERE  " />
@@ -22,30 +21,46 @@
     />
   </head>
 
-  <body id="home" hidden>
+  <body>
     <a href="#content" class="skip-link">Skip to Content</a>
-    <div class="bubbles"></div>
 
-    <!-- **************** INTRO **************** -->
+    <!-- **************** FIXED CONTACT BUTTON **************** -->
 
-    <div class="intro" aria-hidden="true">
-      <div class="scene">
-        <picture>
-          <source srcset="./img/hand.webp" type="image/webp" />
-          <source srcset="./img/hand.png" type="image/png" />
-          <img class="hand" src="./img/hand.png" alt="" />
-        </picture>
-        <picture>
-          <source srcset="./img/stain.webp" type="image/webp" />
-          <source srcset="./img/stain.png" type="image/png" />
-          <img class="stain" src="./img/stain.png" alt="" />
-        </picture>
+    <div class="fixed-contact-btn">
+      <a
+        href=""
+        class="dropdown"
+        aria-label="Contact Menu: Continue to choose a way to reach out to us."
+        >Contact</a
+      >
+      <div class="subnav">
+        <ul>
+          <li>
+            <a href="tel:1-615-516-7016"
+              ><img src="img/call.svg" width="15" alt="" />Call</a
+            >
+          </li>
+          <li>
+            <a href="sms:+16155167016?&body=Cleaning%2520question:%2520 "
+              ><img src="img/text.svg" width="25" height="25" alt="" />Text</a
+            >
+          </li>
+          <li>
+            <a href="mailto:hello@brandicameron.com?subject=Cleaning%20Question"
+              ><img src="img/email.svg" width="22" height="25" alt="" />Email</a
+            >
+          </li>
+        </ul>
       </div>
     </div>
+    <div class="bubbles"></div>
 
     <!-- **************** MAIN NAVIGATION **************** -->
 
     <header>
+      <div class="info-bar">
+        FULLY LICENSED, BONDED & INSURED NASHVILLE COMPANY
+      </div>
       <nav>
         <ul>
           <li class="main-nav-link home"><a href="index.html">Home</a></li>
@@ -62,8 +77,8 @@
                 height="210"
             /></a>
           </li>
-          <li class="main-nav-link"><a href="index.html">About</a></li>
-          <li class="main-nav-link"><a href="index.html">Contact</a></li>
+          <li class="main-nav-link"><a href="#about">About</a></li>
+          <li class="main-nav-link"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -84,7 +99,7 @@
         >
           <source src="./video/kitchen.mp4" type="video/mp4" />
         </video>
-        <h1>
+        <h1 class="fade-in">
           We only use<span class="feature-word">Natural</span> cleaning products
           in your home.
         </h1>
@@ -97,61 +112,34 @@
 
       <div class="review-container">
         <div class="stars">
-          <img
-            src="./img/white-star.svg"
-            alt=""
-            class="star"
-            width="20"
-            height="20"
-          />
-          <img
-            src="./img/white-star.svg"
-            alt=""
-            class="star"
-            width="20"
-            height="20"
-          />
-          <img
-            src="./img/white-star.svg"
-            alt=""
-            class="star"
-            width="20"
-            height="20"
-          />
-          <img
-            src="./img/white-star.svg"
-            alt=""
-            class="star"
-            width="20"
-            height="20"
-          />
-          <img
-            src="./img/white-star.svg"
-            alt=""
-            class="star"
-            width="20"
-            height="20"
-          />
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
         </div>
-        <div class="review">
+        <div class="review fade-in">
           I love my house being cleaned without all the chemicals. Heather & the
           girls will customize your service to give you exactly what you want.
-          <span class="customer">~KG in Bellevue</span>
+          <span class="customer">~KG in West Nashville</span>
         </div>
-        <!-- <div class="customer">KG - Bellevue</div> -->
       </div>
 
       <!-- **************** PACKAGES SECTION **************** -->
 
       <section class="packages-container" id="pricing">
-        <h2><span class="sub-heading">Eco-Friendly </span>Cleaning Packages</h2>
+        <div class="packages-heading">
+          <h2>
+            <span class="sub-heading">Eco-Friendly </span>Cleaning Packages
+          </h2>
 
-        <p>
-          Pricing based on homes up to 2000 square feet. Please call for a free
-          estimate on larger homes or for a one-time cleaning.
-        </p>
+          <p>
+            Pricing based on homes up to 2000 square feet. Please call for a
+            free estimate on larger homes or for a one-time cleaning.
+          </p>
+        </div>
         <div class="packages">
-          <div class="package-card">
+          <div class="package-card lift">
             <h3 class="package-title">Pre-Party Blitz</h3>
             <div class="package-price">
               <span class="dollar-sign">$</span>75
@@ -177,7 +165,7 @@
               >Schedule Now</a
             >
           </div>
-          <div class="package-card">
+          <div class="package-card lift">
             <div class="most-popular">MOST POPULAR</div>
             <h3 class="package-title">Deluxe</h3>
             <div class="package-price">
@@ -202,7 +190,7 @@
               >Schedule Now</a
             >
           </div>
-          <div class="package-card">
+          <div class="package-card lift">
             <h3 class="package-title">Premium</h3>
             <div class="package-price">
               <span class="dollar-sign">$</span>200
@@ -228,6 +216,107 @@
           </div>
         </div>
       </section>
+
+      <!-- **************** ADD ON SERVICES **************** -->
+
+      <section class="add-on-section">
+        <h2>Add-On Services</h2>
+        <ul>
+          <li class="checked">Recycling Pickup</li>
+          <li class="checked">Organizational Services</li>
+          <li class="checked">Party Prep/Cleanup</li>
+          <li class="checked">Holiday Decor Removal</li>
+        </ul>
+        <a href="" class="btn-primary">Get a Custom Quote</a>
+      </section>
+
+      <!-- **************** ABOUT US **************** -->
+
+      <section class="about-container" id="about">
+        <h2>We are a Proud<br />Nashville Company</h2>
+        <div class="heather-container">
+          <div class="heather-text">
+            <p>
+              <span class="accent-text">Hi, I'm Heather Davidson,</span>
+              owner of CLEAN &amp; GREEN and a lifelong resident of Nashville
+              &#8212; specifically West Meade and Bellevue. I attended local
+              schools, and upon graduation from MTSU returned to Bellevue to
+              raise my family.
+            </p>
+            <p>
+              I embrace the fact that a home can be cleaned in an
+              environmentally safe way and would love to bring that philosophy
+              to your home.
+            </p>
+            <p>
+              Call, text, or email &#8212; I would love to put together the
+              perfect cleaning solution for your needs.
+            </p>
+            <img
+              src="./img/heather-signature.svg"
+              alt=""
+              class="heather-signature"
+            />
+            <p class="tiny-text">Heather Davidson &#8226; Owner</p>
+          </div>
+          <img
+            src="./img/heather.png"
+            alt="Heather Davidson, owner of Clean and Green"
+            class="heather lift"
+          />
+        </div>
+      </section>
+
+      <!-- **************** SECOND REVIEW **************** -->
+
+      <div class="review-container">
+        <div class="stars">
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+        </div>
+        <div class="review fade-in">
+          Clean &amp; Green is the best! I love the smell of my house after
+          they've been there &#8212; fresh &amp; clean with no chemical odors.
+          <span class="customer">~ MW in Bellevue</span>
+        </div>
+      </div>
+
+      <!-- **************** CONTACT **************** -->
+
+      <section id="contact" class="contact-section">
+        <h2>Let's Chat</h2>
+        <p>and find your perfect cleaning solution!</p>
+        <div class="contact-section-links">
+          <ul>
+            <li class="lift">
+              <a href="tel:1-615-516-7016"
+                ><img src="img/call.svg" width="50" height="75" alt="" />Call</a
+              >
+            </li>
+            <li class="lift">
+              <a href="sms:+16155167016?&body=Cleaning%2520question:%2520 "
+                ><img src="img/text.svg" width="75" height="75" alt="" />Text</a
+              >
+            </li>
+            <li class="lift">
+              <a
+                href="mailto:hello@brandicameron.com?subject=Cleaning%20Question"
+                ><img src="img/email.svg" width="75" height="75" alt="" />
+                Email</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="contact-info">
+          <div>(615) 516-7016</div>
+          <div>info@cleanandgreennashville.com</div>
+        </div>
+      </section>
+      <!-- **************** FOOTER **************** -->
+
       <footer>
         <div class="footer-content">
           <div class="copyright" id="copyright-year"></div>

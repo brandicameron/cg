@@ -1,49 +1,17 @@
 gsap.registerPlugin(ScrollTrigger, CustomEase, CustomWiggle);
 
-// ---------------- INTRO SCREEN/ANIMATION ----------------
-// Added body hidden code to prevent the flash whichever screen isn't supposed to show based on session storage value
-function determineSessionStorage() {
-  if (!("visited" in sessionStorage)) {
-    introAnimation();
-    document.querySelector("body").hidden = false;
+// ---------------- FIXED CONTACT BUTTON ----------------
+window.onscroll = function () {
+  let contactBtn = document.querySelector(".fixed-contact-btn");
+  if (
+    document.body.scrollTop > 400 ||
+    document.documentElement.scrollTop > 400
+  ) {
+    contactBtn.style.visibility = "visible";
   } else {
-    document.querySelector(".intro").hidden = true;
-    document.querySelector("body").hidden = false;
+    contactBtn.style.visibility = "hidden";
   }
-  sessionStorage.setItem("visited", "visited");
-}
-
-function introAnimation() {
-  function raiseIntro() {
-    document.querySelector(".intro").classList.add("raise-intro");
-  }
-
-  let tl = gsap.timeline();
-  CustomWiggle.create("myWiggle", { wiggles: 4 });
-
-  tl.to(".hand", {
-    delay: 1.2,
-    duration: 0.4,
-    y: 400,
-  })
-    .to(".stain", {
-      opacity: 0,
-      duration: 0.2,
-    })
-    .to(".hand", {
-      duration: 0.3,
-      ease: "myWiggle",
-      x: 5,
-    })
-    .to(".hand", {
-      duration: 1,
-      y: -400,
-      // onUpdate: raiseIntro,
-      onComplete: raiseIntro,
-    });
-}
-
-window.onload = determineSessionStorage;
+};
 
 // ---------------- BUBBLES ----------------
 //https://codepen.io/snorkltv/pen/abddMGd
@@ -157,28 +125,45 @@ function init() {
 }
 gsap.delayedCall(0.1, init);
 
-// ---------------- CONTENT ANIMATIONS ----------------
+// ---------------- VIDEO ANIMATION ----------------
 
 gsap.to(".header-video", {
   scale: 1.3,
   scrollTrigger: {
-    trigger: ".header-video",
+    trigger: "nav ul",
     start: "top",
     end: "+=900",
     scrub: true,
   },
 });
 
-const packages = gsap.utils.toArray(".package-card");
+// ---------------- LIFT ANIMATIONS ----------------
 
-packages.forEach((package) => {
-  gsap.from(package, {
-    y: 550,
-    scrollTrigger: {
-      trigger: ".packages",
-      start: "top center",
-      scrub: true,
-    },
+const liftElements = document.querySelectorAll(".lift");
+
+liftElements.forEach((element) => {
+  let tl = gsap.timeline().from(element, { y: 100 });
+
+  ScrollTrigger.create({
+    trigger: element,
+    start: "top 100%",
+    toggleActions: "play none none reverse",
+    animation: tl,
+  });
+});
+
+// ---------------- FADE IN ANIMATIONS ----------------
+
+const fadeInElements = document.querySelectorAll(".fade-in");
+
+fadeInElements.forEach((element) => {
+  let tl = gsap.timeline().from(element, { alpha: 0 });
+
+  ScrollTrigger.create({
+    trigger: element,
+    start: "top 90%",
+    // toggleActions: "play none none reverse",
+    animation: tl,
   });
 });
 
