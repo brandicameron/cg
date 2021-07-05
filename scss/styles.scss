@@ -548,15 +548,25 @@ nav {
     @extend .flex;
 
     li {
-      width: 75px;
       text-align: center;
       margin: 10px 25px;
+
+      a {
+        img:hover {
+          filter: brightness(1.1);
+          transform: scale(0.985);
+        }
+      }
     }
   }
 
   .contact-info {
     text-align: center;
-    margin: 40px auto;
+    margin: 10px auto;
+
+    div {
+      margin: 7px 0;
+    }
   }
 }
 
@@ -670,6 +680,10 @@ footer {
     width: 320px;
     top: -100px;
     margin-bottom: -40px;
+  }
+
+  .contact-section-links ul li {
+    margin: 10px 15px;
   }
 
   footer {
