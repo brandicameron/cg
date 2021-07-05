@@ -528,6 +528,7 @@ nav {
   .heather {
     z-index: -1;
     margin-top: 30px;
+    object-fit: contain;
   }
 }
 
@@ -647,23 +648,13 @@ footer {
     }
   }
 
-  footer {
-    height: auto;
-    background-size: 250vw;
-    overflow-x: hidden;
-  }
-
-  .footer-content {
-    width: 75vw;
-    text-align: center;
-    line-height: 160%;
-    padding-bottom: 50px;
-    margin: 0 auto;
-  }
-
   .add-on-section > ul {
     padding: 30px 0;
     columns: 1;
+  }
+
+  .about-container {
+    padding: 85px 0 0 0;
   }
 
   .heather-container {
@@ -676,7 +667,22 @@ footer {
 
   .heather {
     position: relative;
-    top: -30px;
-    width: 275px;
+    width: 320px;
+    top: -100px;
+    margin-bottom: -40px;
+  }
+
+  footer {
+    height: auto;
+    background-size: 250vw;
+    overflow-x: hidden;
+  }
+
+  .footer-content {
+    width: 75vw;
+    text-align: center;
+    line-height: 160%;
+    padding-bottom: 50px;
+    margin: 0 auto;
   }
 }

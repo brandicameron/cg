@@ -162,7 +162,6 @@ fadeInElements.forEach((element) => {
   ScrollTrigger.create({
     trigger: element,
     start: "top 90%",
-    // toggleActions: "play none none reverse",
     animation: tl,
   });
 });
