@@ -169,6 +169,4 @@ fadeInElements.forEach((element) => {
 // ---------------- INSERT COPYRIGHT ----------------
 
 const currentYear = new Date().getFullYear();
-document.getElementById(
-  "copyright-year"
-).textContent = `© Clean & Green, LLC \u00A0 2008 — ${currentYear} \u00A0 |\u00A0 \u00A0 All Rights Reserved`;
+document.getElementById("copyright-year").textContent = currentYear;
