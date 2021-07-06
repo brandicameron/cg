@@ -177,7 +177,7 @@ li {
   background-color: #fff;
   border-radius: 50px;
   left: 50%;
-  transform: translateX(-50%);
+  // transform: translateX(-50%);
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.15);
   z-index: 100;
   top: -77px;
@@ -273,6 +273,7 @@ nav {
         padding: 15px;
         top: 5px;
         z-index: 100;
+        filter: contrast(1.1);
       }
 
       // Prevents hover underline on logo
