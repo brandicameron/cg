@@ -592,11 +592,57 @@ footer {
     color: #fff;
     text-align: center;
     align-self: flex-end;
+
+    a {
+      color: #fff;
+    }
+
+    a:hover {
+      opacity: 0.8;
+    }
   }
 
   .bar {
     color: #fff;
     padding: 0 5px;
+  }
+}
+
+/*---------------- PRIVACY POLICY PAGE ----------------*/
+
+.privacy-page {
+  h1 {
+    @extend .x-bold-font;
+    font-size: 3rem;
+    line-height: 110%;
+    color: $primary-color;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-top: 60px;
+  }
+
+  p {
+    max-width: 650px;
+    padding: 0 30px;
+  }
+
+  a {
+    color: $primary-color;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    padding: 0 30px;
+    margin: 0 auto;
+    li {
+      list-style-type: disc;
+    }
   }
 }
 
@@ -704,7 +750,7 @@ footer {
     height: 30vh;
   }
 
-  .bar {
+  .bar-hide {
     display: none;
   }
 }
