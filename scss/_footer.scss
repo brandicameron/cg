@@ -2,9 +2,8 @@ footer {
   position: relative;
   @extend .flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100vw;
+  height: 300px;
   background: $primary-color;
   padding-bottom: 10vh;
 }
@@ -13,17 +12,17 @@ footer {
   position: relative;
   top: 0;
   background-image: url(../img/suds.png);
-  background-size: cover;
+  background-size: contain;
   width: 100vw;
-  height: 350px;
+  height: 300px;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
 }
 
 .copyright {
   color: #fff;
   text-align: center;
-  padding: 50px 0 0 0;
+  padding: 50px 15px 0 15px;
   line-height: 170%;
 }
 

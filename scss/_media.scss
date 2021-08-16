@@ -21,6 +21,10 @@
 }
 
 @media screen and (max-width: 700px) {
+  body {
+    font-size: 17px;
+  }
+
   .break {
     display: block;
   }
@@ -51,7 +55,7 @@
 
   .main-nav-link {
     top: auto;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 0 15px;
   }
 
@@ -68,7 +72,7 @@
   }
 
   .banner .header-video {
-    height: 75vh;
+    height: 80vh;
     top: 0;
   }
 
@@ -77,7 +81,8 @@
   }
 
   .review-container {
-    margin-top: -90px;
+    margin-top: -50px;
+    height: 300px;
 
     .review {
       font-size: 1.05rem;
@@ -120,15 +125,23 @@
     position: relative;
     width: 320px;
     top: -100px;
-    margin-bottom: -40px;
+    margin-bottom: -75px;
+  }
+
+  .contact-list li a {
+    margin: 0 15px;
   }
 
   footer {
     padding-bottom: 150px;
+    height: 400px;
   }
 
   .footer-img {
-    height: 150px;
+    background-size: 200%;
+    height: 400px;
+    background-position: top;
+    background-repeat: no-repeat;
   }
 
   .bar-hide {
