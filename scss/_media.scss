@@ -72,10 +72,8 @@
     top: 0;
   }
 
-  .banner {
-    .feature-word {
-      padding: 35px 0 45px 0;
-    }
+  .feature-word {
+    padding: 35px 0 45px 0;
   }
 
   .review-container {
@@ -101,28 +99,28 @@
     }
   }
 
-  .add-on-section > ul {
+  .add-on-section-list {
     padding: 30px 0;
     columns: 1;
   }
 
   .about-container {
     padding: 85px 0 0 0;
+  }
 
-    .heather-container {
-      flex-direction: column;
-    }
+  .heather-container {
+    flex-direction: column;
+  }
 
-    .heather-text {
-      width: 275px;
-    }
+  .heather-text {
+    width: 275px;
+  }
 
-    .heather {
-      position: relative;
-      width: 320px;
-      top: -100px;
-      margin-bottom: -40px;
-    }
+  .heather {
+    position: relative;
+    width: 320px;
+    top: -100px;
+    margin-bottom: -40px;
   }
 
   footer {
