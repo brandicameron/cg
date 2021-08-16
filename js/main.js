@@ -1,18 +1,5 @@
 gsap.registerPlugin(ScrollTrigger, CustomEase, CustomWiggle);
 
-// ---------------- FIXED CONTACT BUTTON ----------------
-window.onscroll = function () {
-  let contactBtn = document.querySelector(".fixed-contact-btn");
-  if (
-    document.body.scrollTop > 400 ||
-    document.documentElement.scrollTop > 400
-  ) {
-    contactBtn.style.visibility = "visible";
-  } else {
-    contactBtn.style.visibility = "hidden";
-  }
-};
-
 // ---------------- BUBBLES ----------------
 //https://codepen.io/snorkltv/pen/abddMGd
 
