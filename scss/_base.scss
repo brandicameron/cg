@@ -16,6 +16,11 @@ $btn-gradient: linear-gradient(to right, #0097d4, #02bfe7 20%, #0097d4);
 body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 .skip-link {
@@ -102,6 +107,12 @@ p {
   max-width: 450px;
   margin: 30px auto;
   line-height: 170%;
+}
+
+h1 {
+  @extend .x-bold-font;
+  font-size: 4rem;
+  color: $primary-color;
 }
 
 h2 {

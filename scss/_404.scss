@@ -1,0 +1,19 @@
+.page-not-found {
+  @extend .flex;
+  flex-direction: column;
+  padding: 50px 0;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page-not-found h1:first-child {
+  margin-bottom: 25px;
+  line-height: 100%;
+}
+
+.couch {
+  @extend .medium-font;
+  line-height: 130%;
+  margin-bottom: 50px;
+}
