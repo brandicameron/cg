@@ -22,6 +22,8 @@
     transform: translateX(-50%);
     top: 0;
     width: 90vw;
+    height: auto;
+    object-fit: contain;
   }
 
   .banner-heading {
