@@ -177,12 +177,3 @@ console.log(
   "%cFind a bug? Email me! hello@brandicameron.com",
   "background:white; color: rebeccapurple; font-size:11px; padding:10px; border-radius: 20px;"
 );
-
-// ---------------- TESTING ----------------
-
-// const allImages = document.querySelectorAll("img");
-// allImages.forEach((img) => {
-//   img.style.display = "none";
-// });
-
-// document.querySelector("video").style.display = "none";
