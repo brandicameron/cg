@@ -1,0 +1,34 @@
+.about-container {
+  @extend .flex;
+  flex-direction: column;
+  padding: 85px 50px 40px 50px;
+
+  h2 {
+    color: $primary-color;
+  }
+
+  .accent-text {
+    @extend .bold-font;
+    color: $primary-color;
+    font-size: 1.1rem;
+  }
+
+  .heather-container {
+    @extend .flex;
+  }
+
+  .heather-signature {
+    width: 250px;
+  }
+
+  .tiny-text {
+    font-size: 0.9rem;
+    margin-top: 0px;
+  }
+
+  .heather {
+    z-index: -1;
+    margin-top: 30px;
+    object-fit: contain;
+  }
+}

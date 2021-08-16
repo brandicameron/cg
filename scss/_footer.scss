@@ -1,0 +1,38 @@
+footer {
+  position: relative;
+  @extend .flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background: $primary-color;
+  padding-bottom: 10vh;
+  flex: 1;
+}
+
+.footer-img {
+  position: relative;
+  top: 0;
+  background-image: url(../img/suds.png);
+  background-size: cover;
+  width: 100vw;
+  height: 350px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.copyright {
+  color: #fff;
+  text-align: center;
+  padding: 50px 0 0 0;
+  line-height: 170%;
+}
+
+.privacy-policy-link:hover {
+  opacity: 0.8;
+}
+
+.bar {
+  color: #fff;
+  padding: 0 5px;
+}

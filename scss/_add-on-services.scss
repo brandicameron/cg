@@ -1,0 +1,16 @@
+.add-on-section {
+  @extend .flex;
+  flex-direction: column;
+  background: lighten($primary-color, 50%);
+  margin-top: -200px;
+  padding: 220px 0 100px 0;
+
+  h2 {
+    color: $primary-text-color;
+  }
+
+  ul {
+    padding: 30px 0;
+    columns: 2;
+  }
+}

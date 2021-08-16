@@ -1,0 +1,154 @@
+$primary-color: #03a5de;
+$light-primary-color: #e4f6ff;
+$secondary-color: #2fa21b;
+$primary-text-color: #6a6a6a;
+$btn-gradient: linear-gradient(to right, #0097d4, #02bfe7 20%, #0097d4);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  color: $primary-text-color;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.skip-link {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  border: 1px dotted grey;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.skip-link:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// adds top padding to anchor link destination
+:target {
+  scroll-margin-top: 2em;
+}
+
+/*---------------- UTILITIES ----------------*/
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bold-font {
+  font-weight: 700;
+}
+
+.x-bold-font {
+  font-weight: 900;
+}
+
+.small-font {
+  font-size: 1.2rem;
+  @extend .x-bold-font;
+}
+
+.medium-font {
+  font-size: 2rem;
+  @extend .x-bold-font;
+}
+
+.large-font {
+  font-size: 4rem;
+  @extend .x-bold-font;
+  line-height: 95%;
+}
+
+.btn-primary {
+  background: $primary-color;
+  color: #fff;
+  border-radius: 20px;
+  padding: 12px 30px;
+  @extend .bold-font;
+  transition: background 0.5s linear;
+}
+
+.btn-primary:hover {
+  background-image: $btn-gradient;
+  background-size: 150% auto;
+  background-position: center center;
+  transform: scale(0.995);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  max-width: 450px;
+  margin: 30px auto;
+  line-height: 170%;
+}
+
+h2 {
+  @extend .large-font;
+  color: $primary-color;
+  margin: 5px auto;
+  text-align: center;
+  line-height: 85%;
+  line-height: 100%;
+}
+
+ul {
+  text-align: left;
+}
+
+li {
+  padding: 7px;
+}
+
+.checked:before {
+  @extend .bold-font;
+  content: "✓";
+  padding-right: 8px;
+  color: $primary-color;
+}
+
+.unchecked {
+  opacity: 0.4;
+}
+
+.unchecked:before {
+  content: "x";
+  padding-right: 8px;
+  @extend .bold-font;
+  opacity: 0.6;
+}
+
+/*---------------- FLOATING BUBBLES ----------------*/
+
+.bubbles {
+  position: absolute;
+  z-index: 999;
+}
+
+.bubble {
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  background-image: url("../img/large-bubble.png");
+}

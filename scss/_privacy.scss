@@ -1,0 +1,35 @@
+.privacy-page {
+  h1 {
+    @extend .x-bold-font;
+    font-size: 3rem;
+    line-height: 110%;
+    color: $primary-color;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-top: 60px;
+  }
+
+  p {
+    max-width: 650px;
+    padding: 0 30px;
+  }
+
+  a {
+    color: $primary-color;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    padding: 0 30px;
+    margin: 0 auto;
+    li {
+      list-style-type: disc;
+    }
+  }
+}

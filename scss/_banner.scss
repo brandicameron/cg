@@ -1,0 +1,49 @@
+.banner {
+  position: relative;
+  @extend .flex;
+  flex-direction: column;
+  width: 100vw;
+  height: clamp(80vh, 90vh, 600px);
+  overflow: hidden;
+  top: -50px;
+
+  .header-video {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    object-fit: cover;
+    height: clamp(80vh, 100vh, 600px);
+    filter: brightness(0.7);
+  }
+
+  .shadow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 90vw;
+  }
+
+  h1 {
+    width: clamp(300px, 70vw, 550px);
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 100%;
+    color: #fff;
+  }
+
+  .feature-word {
+    @extend .x-bold-font;
+    display: block;
+    font-size: clamp(3rem, 25vw, 8rem);
+    letter-spacing: -3px;
+    text-align: center;
+    padding: 50px 0 60px 0;
+    color: #fff;
+  }
+
+  .btn-primary {
+    margin-top: 40px;
+  }
+}

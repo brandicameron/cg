@@ -1,0 +1,84 @@
+.info-bar {
+  position: relative;
+  color: $primary-color;
+  @extend .x-bold-font;
+  @extend .flex;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 10px;
+  letter-spacing: 0.5px;
+  border-bottom: 1px dotted lighten($primary-color, 20%);
+  z-index: 1010;
+}
+
+.break {
+  display: none;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+.mobile-logo-image {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 215px;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 15px;
+  top: 5px;
+  z-index: 100;
+  filter: contrast(1.1);
+}
+
+nav {
+  @extend .flex;
+  height: 215px;
+}
+
+.nav-list {
+  @extend .flex;
+  @extend .x-bold-font;
+  width: 90vw;
+  max-width: 1000px;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+  margin-top: -12px;
+}
+
+.logo {
+  position: relative;
+  width: 215px;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 15px;
+  top: 5px;
+  z-index: 100;
+  filter: contrast(1.1);
+}
+
+.main-nav-link a {
+  color: $primary-color;
+  cursor: pointer;
+}
+
+.main-nav-link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  transform: scale(0);
+  height: 2px;
+  margin-top: 1px;
+  background-color: lighten($primary-color, 15%);
+  transition: transform 0.15s linear;
+}
+
+.main-nav-link:hover::after {
+  transform: scale(1);
+}
+
+.main-nav-link {
+  position: relative;
+  top: -20px;
+}

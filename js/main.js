@@ -142,7 +142,7 @@ gsap.to(".header-video", {
 const liftElements = document.querySelectorAll(".lift");
 
 liftElements.forEach((element) => {
-  let tl = gsap.timeline().from(element, { y: 100 });
+  let tl = gsap.timeline().from(element, { y: 50 });
 
   ScrollTrigger.create({
     trigger: element,
@@ -169,11 +169,20 @@ fadeInElements.forEach((element) => {
 // ---------------- INSERT COPYRIGHT ----------------
 
 const currentYear = new Date().getFullYear();
-document.getElementById("copyright-year").textContent = currentYear;
+document.getElementById("copyright-year").textContent = `${currentYear},`;
 
 // ---------------- CONSOLE MESSAGE ----------------
 
 console.log(
-  "%cCrafted with ♥️ by Brandi / brandicameron.com",
+  "%cFind a bug? Email me! hello@brandicameron.com",
   "background:white; color: rebeccapurple; font-size:11px; padding:10px; border-radius: 20px;"
 );
+
+// ---------------- TESTING ----------------
+
+// const allImages = document.querySelectorAll("img");
+// allImages.forEach((img) => {
+//   img.style.display = "none";
+// });
+
+// document.querySelector("video").style.display = "none";
