@@ -1,6 +1,7 @@
 .add-on-section {
   @extend .flex;
   flex-direction: column;
+  width: 100vw;
   background: lighten($primary-color, 50%);
   margin-top: -200px;
   padding: 220px 0 100px 0;
@@ -11,6 +12,7 @@
 }
 
 .add-on-section-list {
-  padding: 30px 0;
+  padding: 30px 0 15px 0;
   columns: 2;
+  width: 60vw;
 }
