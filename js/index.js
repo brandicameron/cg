@@ -129,12 +129,11 @@ gsap.to(".header-video", {
 const liftElements = document.querySelectorAll(".lift");
 
 liftElements.forEach((element) => {
-  let tl = gsap.timeline().from(element, { y: 50 });
+  let tl = gsap.timeline().from(element, { y: 100 });
 
   ScrollTrigger.create({
     trigger: element,
-    start: "top 100%",
-    toggleActions: "play none none reverse",
+    start: "top 90%",
     animation: tl,
   });
 });

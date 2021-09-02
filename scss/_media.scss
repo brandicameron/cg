@@ -41,8 +41,8 @@
     position: fixed;
     bottom: 0;
     background-color: #fff;
-    height: 75px;
-    padding-bottom: 10px;
+    height: 65px;
+    padding-bottom: 0;
     width: 100vw;
     z-index: 100;
     box-shadow: 5px 3px 15px #707070;
@@ -98,16 +98,41 @@
 
       ul {
         width: auto;
-        columns: 1;
-        margin: 20px auto;
+        columns: 2;
+        margin: 0 auto;
+      }
+
+      li {
+        padding-left: 10px;
+        border: 2px solid transparent; //for some reason this makes the columns line up
+      }
+
+      .mobile-break {
+        display: block;
       }
     }
   }
 
+  .checked:before {
+    margin-left: -22px;
+  }
+  .unchecked:before {
+    margin-left: -22px;
+  }
+
+  .add-on-section a {
+    width: 210px; //for some reason this button text wrapped on android, this fixes it
+  }
+
   .add-on-section-list {
-    padding: 30px 0;
+    padding: 30px 0 0 0;
+    margin-left: 40px;
     columns: 1;
     width: 60vw;
+
+    li {
+      padding: 8px 15px;
+    }
   }
 
   .about-container {

@@ -14,4 +14,15 @@
 .add-on-section-list {
   padding: 30px 0 15px 0;
   columns: 2;
+
+  li {
+    padding: 13px 15px;
+  }
+}
+
+.checked:before {
+  @extend .bold-font;
+  content: "✓";
+  padding-right: 8px;
+  color: $primary-color;
 }
