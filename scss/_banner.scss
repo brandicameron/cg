@@ -2,7 +2,7 @@
   position: relative;
   @extend .flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   height: clamp(80vh, 90vh, 600px);
   overflow: hidden;
   top: -50px;
@@ -11,7 +11,7 @@
 .header-video {
   position: absolute;
   z-index: -1;
-  width: 100vw;
+  width: 100%;
   object-fit: cover;
   height: clamp(80vh, 100vh, 600px);
   filter: brightness(0.7);
