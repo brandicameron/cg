@@ -100,7 +100,7 @@
 
       li {
         padding-left: 10px;
-        border: 2px solid transparent; //for some reason this makes the columns line up
+        border: 2px solid transparent; //strangely, this makes the columns line up
       }
 
       .mobile-break {
@@ -117,7 +117,7 @@
   }
 
   .add-on-section a {
-    width: 210px; //for some reason this button text wrapped on android, this fixes it
+    width: 210px; //this button text wrapped on android, this fixes it
   }
 
   .add-on-section-list {
@@ -154,8 +154,9 @@
     margin: 0 15px;
   }
 
-  .copyright {
-    margin-top: unset;
+  footer {
+    justify-content: center;
+    height: 300px;
   }
 
   .page-not-found {
