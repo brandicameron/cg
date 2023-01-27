@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+.contact-section p {
+  margin: 0;
+}
+
 .contact-list {
   @extend .flex;
   margin: 45px 0 35px 0;
@@ -19,6 +23,7 @@
   flex-direction: column;
   text-align: center;
   margin: 0 25px;
+  transition: 100ms linear;
 }
 
 .contact-list li a:hover {

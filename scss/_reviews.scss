@@ -36,15 +36,13 @@
     color: #fff;
     font-size: 1.15rem;
     width: clamp(300px, 85vw, 540px);
-    line-height: 160%;
+    line-height: 1.6;
     letter-spacing: 0.5px;
   }
 
   .customer {
-    display: block;
-    text-align: center;
     color: #fff;
-    padding: 5px;
+    padding: 10px;
     opacity: 0.8;
   }
 }

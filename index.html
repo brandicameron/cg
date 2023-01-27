@@ -29,9 +29,9 @@
   <!-- **************** MAIN NAVIGATION **************** -->
 
   <header>
-    <div class="info-bar">
+    <aside class="info-bar">
       FULLY LICENSED, BONDED & INSURED <br class="break">NASHVILLE COMPANY
-    </div>
+    </aside>
     <a href="index.html" class="mobile-logo" aria-label="Click to go back home.">
       <img src="./img/clean-and-green-logo.svg" alt="Clean and Green logo" width="215" height="210"
         class="mobile-logo-image" />
@@ -55,11 +55,6 @@
 
   <main id="content">
     <section class="banner">
-      <picture>
-        <source srcset="./img/shadow.webp" type="image/webp" />
-        <source srcset="./img/shadow.png" />
-        <img src="./img/shadow.png" alt="" class="shadow" width="1083" height="51" />
-      </picture>
       <video class="header-video" autoplay loop muted playsinline height="1920" width="1080">
         <source src="./video/kitchen.mp4" type="video/mp4" />
       </video>
@@ -73,25 +68,25 @@
 
     <!-- **************** REVIEW SECTION **************** -->
 
-    <div class="review-container">
-      <div class="stars">
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-      </div>
-      <figure class="review fade-in">
+    <figure class="review-container">
+      <ul class="stars">
+        <li class="star"></li>
+        <li class="star"></li>
+        <li class="star"></li>
+        <li class="star"></li>
+        <li class="star"></li>
+      </ul>
+      <blockquote class="review fade-in">
         I love my house being cleaned without all the chemicals. Heather & the
         girls will customize your service to give you exactly what you want.
-        <span class="customer">~KG in West Nashville</span>
-      </figure>
-    </div>
+      </blockquote>
+      <figcaption class="customer">~KG in West Nashville</figcaption>
+    </figure>
 
     <!-- **************** PACKAGES SECTION **************** -->
 
     <section class="packages-container" id="pricing">
-      <div class="packages-heading">
+      <header class="packages-heading">
         <h2>
           <span class="sub-heading">Eco-Friendly </span>Cleaning Packages
         </h2>
@@ -100,15 +95,14 @@
           Pricing based on homes up to 2000 square feet. Please call for a
           free estimate on larger homes or for a one-time cleaning.
         </p>
-      </div>
+      </header>
       <ul class="packages">
         <li class="package-card">
           <h3 class="package-title">Pre-Party Blitz</h3>
           <h4 class="package-price">
             <sup class="dollar-sign">$</sup>75
           </h4>
-          <div class="frequency">One-Time Clean</div>
-          <div class="divider"></div>
+          <small class="frequency">One-Time Clean</small>
           <ul>
             <li class="checked">Bathrooms (+ floors)</li>
             <li class="checked">Kitchen <br class="mobile-break">(+ floors)</li>
@@ -129,8 +123,7 @@
           <h4 class="package-price">
             <sup class="dollar-sign">$</sup>95
           </h4>
-          <div class="frequency">Weekly/Bi-Weekly</div>
-          <div class="divider"></div>
+          <small class="frequency">Weekly/Bi-Weekly</small>
           <ul>
             <li class="checked">Bathrooms (+ floors)</li>
             <li class="checked">Kitchen <br class="mobile-break">(+ floors)</li>
@@ -148,8 +141,7 @@
           <h4 class="package-price">
             <sup class="dollar-sign">$</sup>200
           </h4>
-          <div class="frequency">One-Time Clean</div>
-          <div class="divider"></div>
+          <small class="frequency">One-Time Clean</small>
           <ul>
             <li class="checked">Bathrooms (+ floors)</li>
             <li class="checked">Kitchen <br class="mobile-break">(+ floors)</li>
@@ -201,7 +193,7 @@
             perfect cleaning solution for your needs.
           </p>
           <img src="./img/heather-signature.svg" alt="" class="heather-signature" width="329" height="116" />
-          <p class="tiny-text">Heather Davidson &#8226; Owner</p>
+          <small>Heather Davidson &#8226; Owner</small>
         </div>
         <picture>
           <source srcset="./img/heather.webp" type="image/webp" />
@@ -214,26 +206,26 @@
 
     <!-- **************** SECOND REVIEW **************** -->
 
-    <div class="review-container">
-      <div class="stars">
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-      </div>
-      <figure class="review fade-in">
+    <figure class="review-container">
+      <ul class="stars">
+        <li class="star"></li>
+        <li class="star"></li>
+        <li class="star"></li>
+        <li class="star"></li>
+        <li class="star"></li>
+      </ul>
+      <blockquote class="review fade-in">
         Clean &amp; Green is the best! I love the smell of my house after
         they've been there &#8212; fresh &amp; clean with no chemical odors.
-        <span class="customer">~ MW in Bellevue</span>
-      </figure>
-    </div>
+      </blockquote>
+      <figcaption class="customer">~ MW in Bellevue</figcaption>
+    </figure>
 
     <!-- **************** CONTACT **************** -->
 
     <section id="contact" class="contact-section">
       <h2>Let's Chat</h2>
-      <div>and find your perfect cleaning solution!</div>
+      <p>and find your perfect cleaning solution!</p>
 
       <ul class="contact-list">
         <li>
@@ -262,11 +254,10 @@
   <!-- **************** FOOTER **************** -->
 
   <footer>
-    <div class="footer-img"></div>
-    <div class="copyright">
+    <small class="copyright">
       <span class="copyright-year" id="copyright-year"></span>
       <a href="privacy.html" class="privacy-policy-link">Privacy Policy</a>
-    </div>
+    </small>
   </footer>
 
   <script src="js/gsap.min.js"></script>

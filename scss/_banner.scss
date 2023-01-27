@@ -6,25 +6,18 @@
   height: clamp(80vh, 90vh, 600px);
   overflow: hidden;
   top: -50px;
+  background-image: url(../img/shadow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .header-video {
   position: absolute;
-  z-index: -1;
   width: 100%;
   object-fit: cover;
   height: clamp(80vh, 100vh, 600px);
   filter: brightness(0.7);
-}
-
-.shadow {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-  width: 90vw;
-  height: auto;
-  object-fit: contain;
+  z-index: -1;
 }
 
 .banner-heading {

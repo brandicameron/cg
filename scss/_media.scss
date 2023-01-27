@@ -67,10 +67,6 @@
     display: none;
   }
 
-  .shadow {
-    display: none;
-  }
-
   .banner .header-video {
     height: 80vh;
     top: 0;
@@ -159,7 +155,7 @@
   }
 
   .copyright {
-    padding: 50px 0 125px 0;
+    margin-top: unset;
   }
 
   .page-not-found {

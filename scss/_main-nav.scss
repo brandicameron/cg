@@ -1,14 +1,12 @@
 .info-bar {
-  position: relative;
-  color: $primary-color;
   @extend .x-bold-font;
-  @extend .flex;
+  color: $primary-color;
   text-align: center;
   font-size: 0.9rem;
   padding: 10px;
   letter-spacing: 0.5px;
   border-bottom: 1px dotted lighten($primary-color, 20%);
-  z-index: 1010;
+  background-color: #fff;
 }
 
 .break {
@@ -29,12 +27,10 @@
   padding: 15px;
   top: 5px;
   z-index: 100;
-  filter: contrast(1.1);
 }
 
 nav {
   @extend .flex;
-  height: 215px;
 }
 
 .main-nav {
@@ -55,7 +51,6 @@ nav {
   padding: 15px;
   top: 5px;
   z-index: 100;
-  filter: contrast(1.1);
 }
 
 .main-nav-link a {
